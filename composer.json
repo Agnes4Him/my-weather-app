@@ -1,3 +1,12 @@
 {
-
+    "name": "agnes/weather_app",
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "authors": [
+        {
+            "name": "Agnes4Him",
+            "email": "ojuhagnes@gmail.com"
+        }
+    ]
 }

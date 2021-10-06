@@ -2,10 +2,16 @@
 
   $weather = "";
   $error = "";
+
+  require_once('vendor/autoload.php');
+
+  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+
+  $dotenv->load();
   
   if ($_GET['city']) {
       
-      $url=file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$_GET['city']."&appid=ac18632aee938246034151538efec8c3");
+      $url=file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$_GET['city']."&appid=".$_ENV['WEATHER_KEY']);
       
       $decodedurl=json_decode($url, true);
       
